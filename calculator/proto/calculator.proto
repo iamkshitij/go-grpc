@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package calculator;
+
+import "sum.proto";
+import "sqrt.proto";
+
+option go_package = "go-grpc/calculator/proto";
+
+service CalculatorService{
+  rpc Sum(SumRequest) returns (SumResponse);
+  rpc Sqrt(SqrtRequest) returns (SqrtResponse);
+}
+
+
+
